@@ -18,7 +18,7 @@ function replaceContentForMobile() {
 <div class="banner__bottom">
     <div class="bottom__cards">
         <div class="card__rate">
-            <span>4,5</span>
+            <span><svg class="icon icon-objects-16-starfilled" width="19" height="19" viewBox="0 0 16 16" fill="none"><g clip-path="url(#clip0_2104_9153)"><path d="M7.99987 12.8472L3.80282 15.3998C3.30985 15.6997 2.69969 15.2564 2.83251 14.6949L3.96328 9.91443L0.238594 6.71163C-0.198897 6.33543 0.034162 5.61815 0.609221 5.57096L5.50512 5.16914L7.40018 0.63704C7.62277 0.104711 8.37696 0.104711 8.59955 0.63704L10.4946 5.16914L15.3905 5.57096C15.9656 5.61815 16.1986 6.33543 15.7611 6.71163L12.0365 9.91443L13.1672 14.6949C13.3 15.2564 12.6899 15.6997 12.1969 15.3998L7.99987 12.8472Z" fill="currentColor" fill-opacity="0.85"></path></g><defs><clipPath id="clip0_2104_9153"><rect width="19" height="19" fill="white"></rect></clipPath></defs></svg> 4,5</span>
             <p>на Отзовике, IRecommend и TutorTop</p>
         </div>
         <div class="card__result">
