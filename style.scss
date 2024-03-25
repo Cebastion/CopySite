@@ -1011,6 +1011,28 @@ p {
 }
 
 
+.hidden{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ///// MEDIA //////
 
 @media screen and (max-width: 1440px) {
@@ -1222,6 +1244,9 @@ p {
 }
 
 @media screen and (max-width: 540px) {
+    .hidden{
+        display: inline-block;
+    }
     .author__block{
         .author__text{
             span{
@@ -1450,7 +1475,7 @@ p {
     }
 
     .spoiler__block{
-        
+
     }
 
     .spoiler__bottom{
