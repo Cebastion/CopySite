@@ -1,6 +1,17 @@
-const spoiler = document.querySelectorAll(".spoiler__block");
-spoiler.forEach((spoiler) => {
-    spoiler.addEventListener("click", () => {
-        spoiler.classList.toggle("open");
+const spoilerBlocks = document.querySelectorAll(".spoiler__block");
+
+spoilerBlocks.forEach((spoilerBlock) => {
+    spoilerBlock.addEventListener("click", (event) => {
+        event.stopPropagation();
+        spoilerBlock.classList.toggle("open");
     });
-})
+});
+
+const spoilerTexts = document.querySelectorAll(".spoiler__text");
+
+spoilerTexts.forEach((spoilerText) => {
+    spoilerText.addEventListener("click", (event) => {
+        event.stopPropagation();
+        spoilerText.classList.toggle("open");
+    });
+});
