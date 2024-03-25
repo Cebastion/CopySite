@@ -1449,11 +1449,31 @@ p {
         transform: rotateY(180deg);
     }
 
+    .spoiler__block{
+        
+    }
+
     .spoiler__bottom{
         display: flex;
         flex-direction: column;
     }
     .spoiler__block.open{
         max-height: 100%;
+    }
+    .program__button{
+        display: none;
+    }
+    .spoiler__number{
+        width: 24px;
+        height: 24px;
+        span{
+            font-size: 12px;
+        }
+    }
+    .spoiler__name span{
+        font-size: 20px;
+    }
+    .spoiler__info span{
+        font-size: 12px;
     }
 }

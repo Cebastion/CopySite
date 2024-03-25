@@ -1383,4 +1383,20 @@ p {
   .spoiler__block.open {
     max-height: 100%;
   }
+  .program__button {
+    display: none;
+  }
+  .spoiler__number {
+    width: 24px;
+    height: 24px;
+  }
+  .spoiler__number span {
+    font-size: 12px;
+  }
+  .spoiler__name span {
+    font-size: 20px;
+  }
+  .spoiler__info span {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=style.css.map */
