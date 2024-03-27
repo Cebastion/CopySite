@@ -89,18 +89,18 @@ function replaceContentForMobile() {
         </button>
     </div>
     <nav class="mobile-header__navigation" style="display: none">
-        <li>О курсе</li>
-        <li>Как учим</li>
-        <li>Поддержка</li>
-        <li>Программа</li>
-        <li>Отвечаем на вопросы</li>
+        <li id="curse">О курсе</li>
+        <li id="learn">Как учим</li>
+        <li id="author">Поддержка</li>
+        <li id="program">Программа</li>
+        <li id="question">Отвечаем на вопросы</li>
     </nav>
 </div>
           <div class="mobile-header__bottom" style="display: none;">
               <nav class="mobile-header__navigation__buttons">
                   <button class="mobile-navigation__button">Компаниям</button>
                   <button class="mobile-navigation__button">Все курсы</button>
-                  <button class="mobile-navigation__button">
+                  <button class="mobile-navigation__button" id="fromToForm">
                       Записаться на курс
                   </button>
               </nav>
@@ -213,6 +213,68 @@ function replaceContentForMobile() {
         secondtRect.setAttribute("fill", "black");
         firstRect.setAttribute("fill", "black");
     }
+
+    const AnchorCurse = document.getElementById("curse");
+    const AnchorLearn = document.getElementById("learn");
+    const AnchorAuthor = document.getElementById("author");
+    const AnchorProgram = document.getElementById("program");
+    const AnchorQuestion = document.getElementById("question");
+    const AnchorForm = document.getElementById("fromToForm");
+
+    const curse = document.querySelector(".content__curse");
+    const learn = document.querySelector(".content__learn");
+    const author = document.querySelector(".content__author");
+    const program = document.querySelector(".content__program");
+    const question = document.querySelector(".content__question");
+    const form = document.querySelector(".content__form");
+
+    AnchorCurse.addEventListener("click", () => {
+        toggleMenuDisplay()
+        curse.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    });
+
+    AnchorLearn.addEventListener("click", () => {
+        toggleMenuDisplay()
+        learn.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    });
+
+    AnchorAuthor.addEventListener("click", () => {
+        toggleMenuDisplay()
+        author.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    });
+
+    AnchorProgram.addEventListener("click", () => {
+        toggleMenuDisplay()
+        program.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    });
+
+    AnchorQuestion.addEventListener("click", () => {
+        toggleMenuDisplay()
+        question.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    });
+
+    AnchorForm.addEventListener("click", () => {
+        toggleMenuDisplay()
+        form.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    });
 }
 
 // Вызываем функцию при загрузке страницы и при изменении размера экрана
