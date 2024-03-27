@@ -1,0 +1,46 @@
+
+    <div class="model__block">
+        <div class="model__title">
+            <h2>Давайте поможем</h2>
+            <div class="model__close">
+                <svg class="icon help-callback__close-button" viewBox="0 0 24 24" width="24" height="24" fill="none" name="symbols-24-cross"><path d="M6.64046 5.22624C6.24993 4.83572 5.61677 4.83572 5.22624 5.22624C4.83572 5.61677 4.83572 6.24993 5.22624 6.64046L10.5858 12L5.22624 17.3596C4.83572 17.7501 4.83572 18.3833 5.22624 18.7738C5.61677 19.1643 6.24993 19.1643 6.64046 18.7738L12 13.4142L17.3596 18.7738C17.7501 19.1643 18.3833 19.1643 18.7738 18.7738C19.1643 18.3833 19.1643 17.7501 18.7738 17.3596L13.4142 12L18.7738 6.64046C19.1643 6.24993 19.1643 5.61677 18.7738 5.22624C18.3833 4.83572 17.7501 4.83572 17.3596 5.22624L12 10.5858L6.64046 5.22624Z" fill="currentColor" fill-opacity="0.85"></path></svg>
+            </div>
+        </div>
+        <p>Напишите, как вас зовут и по какому номеру можно связываться — позвоним и расскажем всё про курсы</p>
+        <form action="" class="model">
+            <div class="model__inputBox">
+                <input id="input__name" type="text" required>
+                <label>Как вас зовут*</label>
+                <div id="error__name" class="message"></div>
+            </div>
+            <div class="model__inputBox">
+                <input id="input__phone" type="text" required>
+                <label>Телефон*</label>
+                <div id="error__phone" class="message"></div>
+            </div>
+            <div class="model__inputBox">
+                <input id="input__email" type="text" required>
+                <label>Почта*</label>
+                <div id="error__email" class="message"></div>
+            </div>
+            <label class="model__inputCheckBox">
+                <input type="checkbox" class="real-checkbox" name="" id="real-checkbox" required>
+                <span class="custom-checkbox"></span>
+                <span>Соглашаюсь с условиями<a style="margin-left: 5px;" href="https://yandex.ru/legal/confidential/">обработки персональных данных</a></span>
+            </label>
+            <button id="model__button" class="model__button" type="button" disabled>Записаться на курс</button>
+        </form>
+        <p>Или позвоните нам сами: 8 800 700-93-29</p>
+        <p>А если не любите голосом — напишите:</p>
+        <div class="model__social">
+            <a href="https://t.me/YndxPracticumCallbackBot" class="social__block">
+                <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" name="services-24-telegram"><path d="M9.55825 14.3029L15.9202 19.0033C16.6462 19.4038 17.1702 19.1964 17.351 18.3292L19.9407 6.12583C20.2058 5.06284 19.5355 4.58072 18.841 4.89603L3.63455 10.7596C2.59657 11.1759 2.60262 11.755 3.44535 12.013L7.34766 13.231L16.3819 7.53138C16.8084 7.27275 17.1998 7.4118 16.8786 7.69693" fill="currentColor" fill-opacity="0.85"></path></svg>
+            </a>
+            <a href="https://vk.com/yandex.practicum" class="social__block">
+                <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" name="services-24-vk"><path d="M12.7978 16.99C6.65169 16.99 3.14607 13.2438 3 7H6.07865C6.17977 11.5754 8.44944 13.4935 10.2472 13.9131V7.00999H13.1461V10.956C14.9213 10.7862 16.7865 8.98801 17.4157 7.00999H20.3146C20.0817 8.03859 19.6121 9.01327 18.9353 9.87285C18.2586 10.7324 17.3893 11.4583 16.382 12.005C17.505 12.5002 18.4972 13.2014 19.2932 14.0624C20.0892 14.9234 20.6709 15.9246 21 17H17.7978C17.504 16.0641 16.9057 15.2263 16.0781 14.5918C15.2505 13.9573 14.2304 13.5543 13.1461 13.4336V17L12.7978 16.99Z" fill="currentColor" fill-opacity="0.85"></path></svg>
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=525584211614&text&type=phone_number&app_absent=0" class="social__block">
+                <svg class="icon icon-social-whatsapp" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.205 7.08c-.194-.465-.34-.482-.634-.494a5.669 5.669 0 00-.335-.012c-.383 0-.782.112-1.023.359-.294.3-1.023.999-1.023 2.433 0 1.435 1.046 2.822 1.187 3.017.147.193 2.04 3.18 4.978 4.397 2.298.952 2.98.864 3.503.752.764-.164 1.722-.729 1.963-1.41.241-.682.241-1.264.17-1.388-.07-.123-.264-.194-.558-.34-.293-.148-1.722-.853-1.992-.947-.264-.1-.517-.065-.717.217-.282.394-.558.794-.781 1.035-.177.188-.465.212-.706.112-.323-.135-1.228-.453-2.345-1.447-.864-.77-1.452-1.728-1.622-2.016-.17-.294-.018-.464.118-.623.147-.182.288-.312.434-.482.148-.17.23-.259.324-.459.1-.194.03-.394-.041-.54-.07-.148-.659-1.583-.9-2.164zM11.997 2C6.484 2 2 6.485 2 12c0 2.187.705 4.215 1.904 5.861l-1.246 3.716 3.844-1.229A9.921 9.921 0 0012.003 22C17.516 22 22 17.514 22 12S17.516 2 12.003 2h-.006z" fill="currentColor"></path></svg>
+            </a>
+        </div>
+    </div>
