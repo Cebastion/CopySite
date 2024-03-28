@@ -35,7 +35,7 @@ function replaceContentForMobile() {
             </div>
         </div>
     </div>
-    <button class="date__button">Записаться на курс</button>
+    <button class="date__button" id="anchor3">Записаться на курс</button>
 </div>
         `;
 
@@ -53,6 +53,17 @@ function replaceContentForMobile() {
         cardFront.classList.toggle("flipped");
         cardBack.classList.toggle("flipped");
     });
+
+
+    const AnchorThirty = document.getElementById('anchor3')
+    const form = document.querySelector('.content__form')
+
+    AnchorThirty.addEventListener('click', () => {
+        form.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    })
 }
 
 window.addEventListener("resize", replaceContentForMobile);

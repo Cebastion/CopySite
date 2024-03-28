@@ -4,6 +4,8 @@ const AnchorAuthor = document.getElementById('author')
 const AnchorProgram = document.getElementById('program')
 const AnchorQuestion = document.getElementById('question')
 const AnchorForm = document.getElementById('fromToForm')
+const AnchorFirst = document.getElementById('anchor1')
+const AnchorSecond = document.getElementById('anchor2')
 
 
 const curse = document.querySelector('.content__curse')
@@ -50,6 +52,20 @@ AnchorQuestion.addEventListener('click', () => {
 })
 
 AnchorForm.addEventListener('click', () => {
+    form.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
+})
+
+AnchorFirst.addEventListener('click', () => {
+    form.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
+})
+
+AnchorSecond.addEventListener('click', () => {
     form.scrollIntoView({
         behavior: 'smooth',
         block: 'start'

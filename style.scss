@@ -432,6 +432,7 @@ p {
 }
 
 .curse__block {
+    gap: 50px;
     padding: 10px;
     background-color: #ffffff;
     border-radius: 10px;
@@ -477,10 +478,11 @@ p {
     background-color: #ffffff;
     border-radius: 10px;
     img {
-        width: clamp(272px, 75vw, 448px);
-        height: clamp(122px, 50vw, 200px);
+        width: 100%;
+        height: 100%;
     }
     span {
+        padding: 0 !important;
         display: inline-block;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -761,6 +763,9 @@ p {
 }
 
 .learn__block {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 10px;
     margin-top: 50px;
     width: 100%;
     display: flex;
@@ -773,6 +778,8 @@ p {
             color: #262626;
         }
         p {
+            font-family: "YS Text Thin";
+            font-weight: 800;
             margin-top: 10px;
             color: #262626;
             font-size: 18px;
@@ -872,11 +879,10 @@ p {
         width: 100%;
         height: 100%;
     }
-    margin: 0 10px;
     display: flex;
     flex-direction: column;
-    max-width: 332px;
-    max-height: 340px;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .mentors__text {
@@ -1620,6 +1626,10 @@ p {
     }
 }
 
+.footer__about{
+    margin: 0 20px;
+}
+
 .footer__about, .footer__command, .footer__partner{
     display: flex;
     flex-direction: column;
@@ -2103,6 +2113,11 @@ p {
         }
     }
     .curse__block {
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        gap: 0;
         flex-direction: column-reverse;
     }
     .content {
@@ -2212,12 +2227,22 @@ p {
     }
     .mobile-review__close{
         display: block !important;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    .line-review__close{
         z-index: 1000;
-        position: fixed;
-        display: block !important;
-        bottom: 0;
-        width: 100%;
-        height: 60px;
+        display: flex;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
     }
 }
 
@@ -2242,6 +2267,15 @@ p {
 }
 
 @media screen and (max-width: 540px) {
+    [class*="content__"], [class*="content_"] {
+        padding: 10px;
+    }
+    .content__banner{
+        padding: 0;
+    }
+    .content__container{
+        padding: 0;
+    }
     .content__question, .content__curse, .program__title{
         h2{
             text-align: start;
@@ -2299,7 +2333,17 @@ p {
                 font-size: 16px;
             }
             p {
+                font-family: "YS Text Regular", sans-serif;
+                font-weight: 100;
+                color: rgba(0, 0, 0, 0.5);
                 font-size: 14px;
+            }
+        }
+        &:last-child{
+            .learn__text{
+                p{
+                    color: #262626;
+                }
             }
         }
     }
@@ -2369,6 +2413,8 @@ p {
         }
     }
     .skills__grid {
+        padding: 0;
+        margin: 0;
         grid-template-columns: repeat(1, 1fr);
     }
     .mobile-swiper-wrapper {
@@ -2383,6 +2429,12 @@ p {
     .stage__block {
         flex-direction: column;
         align-items: flex-start;
+        span{
+            display: inline-block;
+            margin-top: 10px;
+            font-family: "YS Text Thin";
+            font-weight: 800;
+        }
     }
     .header {
         padding: 10px;
@@ -2498,7 +2550,7 @@ p {
     }
 
     .spoiler__block {
-        max-height: 50px;
+        max-height: 70px;
     }
 
     .spoiler__bottom {
@@ -2557,24 +2609,27 @@ p {
         max-height: 25px;
         overflow: hidden;
         border-bottom: 1px solid;
-        transition: 1s all;
+        transition: 0.5s all;
     }
 
     .spoiler__text.open {
-        transition: 1s all;
+        transition: 0.5s all;
         max-height: 300px;
         height: 100%;
         span {
-            transition: 1s all;
+            transition: 0.5s all;
             &::after {
                 content: ">";
                 display: block;
                 font-size: 18px;
                 font-weight: 800;
                 rotate: 270deg;
-                transition: 1s all;
+                transition: 0.5s all;
             }
         }
+    }
+    .content__pay{
+        padding: 0;
     }
     .pay__top {
         h2 {
@@ -2624,6 +2679,17 @@ p {
             }
             p{
                 font-size: 14px;
+            }
+        }
+    }
+
+    .mentors__block{
+        max-width: 100%;
+        max-height: 100%;
+        .mentors__text{
+            margin-top: 10px;
+            span{
+                padding: 0 !important;
             }
         }
     }

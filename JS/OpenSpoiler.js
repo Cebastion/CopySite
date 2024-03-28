@@ -1,7 +1,7 @@
 const spoilerBlocks = document.querySelectorAll(".spoiler__block");
 
 spoilerBlocks.forEach((spoilerBlock) => {
-    if (window.innerWidth >= 540) {
+    if (window.innerWidth >= 768) {
         spoilerBlock.addEventListener("mouseover", (event) => {
             event.stopPropagation();
             spoilerBlock.classList.add("open-half");
@@ -15,7 +15,7 @@ spoilerBlocks.forEach((spoilerBlock) => {
 
 window.addEventListener("resize", () => {
     spoilerBlocks.forEach((spoilerBlock) => {
-        if (window.innerWidth >= 540) {
+        if (window.innerWidth >= 768) {
             spoilerBlock.addEventListener("mouseover", (event) => {
                 event.stopPropagation();
                 spoilerBlock.classList.add("open-half");
