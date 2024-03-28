@@ -10,11 +10,19 @@ spoilerBlocks.forEach((spoilerBlock) => {
     if (window.innerWidth >= 768) {
         spoilerBlock.addEventListener("mouseover", (event) => {
             event.stopPropagation();
-            spoilerBlock.classList.add("open-half");
+            if(!spoilerBlock.classList.contains('open')){
+                spoilerBlock.classList.add("open-half");
+                spoilerBlock.style.maxHeight = "150px";
+            }
         });
         spoilerBlock.addEventListener("mouseleave", (event) => {
             event.stopPropagation();
-            spoilerBlock.classList.remove("open-half");
+            if(!spoilerBlock.classList.contains('open')){
+                const currentBlock = event.currentTarget
+                const topBlock = currentBlock.querySelector(".spoiler__top");
+                spoilerBlock.classList.remove("open-half");
+                spoilerBlock.style.maxHeight = topBlock.scrollHeight + 38 + "px";
+            }
         });
     }
 });
@@ -40,7 +48,14 @@ window.addEventListener("resize", DeleteOpenHalf);
 spoilerBlocks.forEach((spoilerBlock) => {
     spoilerBlock.addEventListener("click", (event) => {
         event.stopPropagation();
+        const currentBlock = event.currentTarget
+        const topBlock = currentBlock.querySelector(".spoiler__top");
         spoilerBlock.classList.toggle("open");
+        if (spoilerBlock.classList.contains("open")) {
+            spoilerBlock.style.maxHeight = spoilerBlock.scrollHeight + "px";
+        } else {
+            spoilerBlock.style.maxHeight = topBlock.scrollHeight + 38 + "px";
+        }
     });
 });
 
@@ -49,9 +64,20 @@ const spoilerTexts = document.querySelectorAll(".spoiler__text");
 spoilerTexts.forEach((spoilerText) => {
     spoilerText.addEventListener("click", (event) => {
         event.stopPropagation();
+        const currentBlock = event.currentTarget;
+        const currentParentBlock = currentBlock.parentElement.parentElement;
+        const span = currentBlock.querySelector("span");
         spoilerText.classList.toggle("open");
+        if (spoilerText.classList.contains("open") && window.innerWidth <= 768) {
+            spoilerText.style.height = spoilerText.scrollHeight + "px"; // Изменено на span.scrollHeight
+            currentParentBlock.style.maxHeight = currentParentBlock.scrollHeight + spoilerText.scrollHeight + "px"; // Изменено на сумму высот текста и высоты блока
+        } else {
+            spoilerText.style.height = span.scrollHeight + "px";
+            currentParentBlock.style.maxHeight = currentParentBlock.scrollHeight - span.scrollHeight + "px"; // Изменено на вычитание высоты текста
+        }
     });
 });
+
 
 ///////////////////////
 
