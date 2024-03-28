@@ -2181,6 +2181,9 @@ p {
   .spoiler__block::before {
     content: none;
   }
+  .spoiler__block.open-half::before {
+    content: none;
+  }
   .mobile-navigation__button:first-child {
     margin-right: 0px;
   }
