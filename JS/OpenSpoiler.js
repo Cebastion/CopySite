@@ -1,5 +1,11 @@
 const spoilerBlocks = document.querySelectorAll(".spoiler__block");
 
+function DeleteOpenHalf() {
+    spoilerBlocks.forEach((spoilerBlock) => {
+        spoilerBlock.classList.remove("open-half");
+    });
+}
+
 spoilerBlocks.forEach((spoilerBlock) => {
     if (window.innerWidth >= 768) {
         spoilerBlock.addEventListener("mouseover", (event) => {
@@ -27,6 +33,9 @@ window.addEventListener("resize", () => {
         }
     });
 });
+
+window.addEventListener("resize", DeleteOpenHalf);
+
 
 spoilerBlocks.forEach((spoilerBlock) => {
     spoilerBlock.addEventListener("click", (event) => {
