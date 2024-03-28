@@ -48,23 +48,23 @@ spoilerTexts.forEach((spoilerText) => {
 
 const questionBlocks = document.querySelectorAll(".question__block");
 const questionButtons = document.querySelectorAll(".question__button");
-const rectsThitry = document.querySelectorAll('.rect-3')
-const rectsFourty = document.querySelectorAll('.rect-4')
+const rectsThitry = document.querySelectorAll(".rect-3");
+const rectsFourty = document.querySelectorAll(".rect-4");
 
 questionBlocks.forEach((questionBlock) => {
     questionBlock.addEventListener("mouseover", (event) => {
         event.stopPropagation();
         const currentBlock = event.currentTarget;
         const currentButton = currentBlock.querySelector(".question__button");
-        const currentRectsThitry = currentBlock.querySelectorAll('.rect-3');
-        const currentRectsFourty = currentBlock.querySelectorAll('.rect-4');
-        
+        const currentRectsThitry = currentBlock.querySelectorAll(".rect-3");
+        const currentRectsFourty = currentBlock.querySelectorAll(".rect-4");
+
         currentButton.classList.add("black-background");
         currentRectsThitry.forEach((rect) => {
-            rect.setAttribute('fill', 'white');
+            rect.setAttribute("fill", "white");
         });
         currentRectsFourty.forEach((rect) => {
-            rect.setAttribute('fill', 'white');
+            rect.setAttribute("fill", "white");
         });
     });
 
@@ -72,21 +72,24 @@ questionBlocks.forEach((questionBlock) => {
         event.stopPropagation();
         const currentBlock = event.currentTarget;
         const currentButton = currentBlock.querySelector(".question__button");
-        const currentRectsThitry = currentBlock.querySelectorAll('.rect-3');
-        const currentRectsFourty = currentBlock.querySelectorAll('.rect-4');
-        
+        const currentRectsThitry = currentBlock.querySelectorAll(".rect-3");
+        const currentRectsFourty = currentBlock.querySelectorAll(".rect-4");
+
         currentButton.classList.remove("black-background");
         currentRectsThitry.forEach((rect) => {
-            rect.setAttribute('fill', 'black');
+            rect.setAttribute("fill", "black");
         });
         currentRectsFourty.forEach((rect) => {
-            rect.setAttribute('fill', 'black');
+            rect.setAttribute("fill", "black");
         });
     });
 
     questionBlock.addEventListener("click", (event) => {
         event.stopPropagation();
+        const currentBlock = event.currentTarget;
+        const contentElement = currentBlock.querySelector(".question__bottom")
 
+        // Close all previously opened blocks
         questionBlocks.forEach((block) => {
             if (block !== questionBlock && block.classList.contains("open")) {
                 block.classList.remove("open");
@@ -94,10 +97,35 @@ questionBlocks.forEach((questionBlock) => {
                 if (button) {
                     button.classList.remove("rotated");
                 }
+
+                // Reset content height for smooth closing animation
+                const contentElement = block.querySelector(".question__bottom"); // Assuming content resides within .question__bottom
+                if (contentElement) {
+                    contentElement.style.height = "0px";
+                }
             }
         });
 
-        questionBlock.classList.toggle('open');
+        questionBlock.classList.toggle("open"); // Toggle open/closed state for clicked block
+
+        if (questionBlock.classList.contains("open")) {
+            // Open animation: Set height to scrollHeight for smooth reveal
+            const contentElement =
+                questionBlock.querySelector(".question__bottom");
+            if (contentElement) {
+                contentElement.style.height = `${contentElement.scrollHeight}px`;
+            }
+        } else {
+            // Close animation: Set height to 0px for smooth collapse
+            const contentElement =
+                questionBlock.querySelector(".question__bottom");
+            if (contentElement) {
+                contentElement.style.height = "0px";
+            }
+        }
+
+        contentElement.style.transition = "height 0.3s ease-in-out"; // Apply transition to clicked block
+
         const button = questionBlock.querySelector(".question__button");
         if (button) {
             button.classList.toggle("rotated");
