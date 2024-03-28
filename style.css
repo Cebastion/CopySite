@@ -791,6 +791,7 @@ p {
   width: 0;
 }
 .author__tabs .tab {
+  padding: 10px;
   border-radius: 10px;
   display: flex;
   align-items: center;
