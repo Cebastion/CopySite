@@ -1552,6 +1552,7 @@ p {
 }
 
 .footer{
+    padding: 0 10px;
     margin-top: 80px;
 }
 
@@ -2291,10 +2292,17 @@ p {
 
 @media screen and (max-width: 540px) {
     [class*="content__"], [class*="content_"] {
-        padding: 10px;
+        padding: 0 10px;
+        margin-top: 64px;
     }
-    .content__banner{
+    .content__skills{
         padding: 0;
+        h2{
+            padding: 0 10px;
+        }
+    }
+    .content_stages{
+        margin-top: 10px;
     }
     .content__container{
         padding: 0;
@@ -2334,6 +2342,7 @@ p {
         }
     }
     .learn__block {
+        margin-top: 10px;
         flex-direction: row-reverse;
         &:nth-child(1n) {
             flex-direction: row-reverse;
@@ -2343,6 +2352,7 @@ p {
             }
         }
         &:last-child {
+            margin-top: 40px;
             video {
                 max-width: 484px !important;
                 max-height: 260px !important;
@@ -2356,8 +2366,8 @@ p {
                 font-size: 16px;
             }
             p {
-                font-family: "YS Text Regular", sans-serif;
-                font-weight: 100;
+                font-family: "YS Text Thin", sans-serif;
+                font-weight: 800;
                 color: rgba(0, 0, 0, 0.5);
                 font-size: 14px;
             }
@@ -2437,7 +2447,7 @@ p {
     }
     .skills__grid {
         padding: 0;
-        margin: 0;
+        margin-left: 10px;
         grid-template-columns: repeat(1, 1fr);
     }
     .mobile-swiper-wrapper {
@@ -2458,6 +2468,10 @@ p {
             font-family: "YS Text Thin";
             font-weight: 800;
         }
+        img{
+            height: 32px;
+            width: 32px;
+        }
     }
     .header {
         padding: 10px;
@@ -2471,7 +2485,7 @@ p {
         position: fixed;
     }
     .content__banner {
-        margin-top: 60px;
+        margin: 0px auto;
     }
     .banner__center {
         border-radius: 12px;
